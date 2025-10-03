@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Chat App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- modern font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-panel">
+            <!-- new header -->
+            <div class="app-header">
+                
+                <div>
+                    <h1 style="margin:0">Realtime Chat</h1>
+                    
+                </div>
+            </div>
+
+            <div id="chat-window">
+                <ul id="messages"></ul>
+            </div>
+
+            <div class="controls">
+                <input id="username" placeholder="Enter your name" />
+                <button id="join-btn">Join</button>
+            </div>
+
+            <div class="input-row">
+                <input id="message-input" placeholder="Type a message..." autocomplete="off" />
+                <button id="send-btn" disabled>✉️ Send</button>
+            </div>
+        </div>
+
+        <div class="users-panel">
+            <h3>Online Users</h3>
+            <ul id="user-list"></ul>
+        </div>
+    </div>
+
+    <!-- use CDN for client script to avoid static routing issues -->
+    <script src="https://cdn.socket.io/4.7.1/socket.io.min.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
